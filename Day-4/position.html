@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>box</title>
+    <style>
+      .box {
+        border: 5px solid black;
+        display: inline-block;
+        width: 15rem;
+        height: 15rem;
+        margin: 10px;
+        background-color: white;
+      }
+      /* #box2 {
+        position: relative;
+        top: 2rem;
+        left: 2rem;
+      } */
+
+      #box4 {
+        position: fixed;
+        margin-right: 10px;
+        right: 10px;
+        bottom: 2px;
+      }
+      .container {
+        border: 1rem solid black;
+        background-color: red;
+        height: 200rem;
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="box1"></div>
+      <div class="box" id="box2"></div>
+      <div class="box" id="box3"></div>
+      <div class="box" id="box4"></div>
+    </div>
+  </body>
+</html>
