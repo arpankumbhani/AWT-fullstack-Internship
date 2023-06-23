@@ -1,0 +1,136 @@
+<html class="no-js" lang="en">
+<head>
+    <title>Registration Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"></link>
+    <style>
+        body {
+            background: #eeeaa3;
+            background: -webkit-linear-gradient(to top, #ef6262, #eee8a3);
+            background: linear-gradient(to top, #e75c5c, #eee8a3);
+        }
+        .container {
+            width: 400rem;
+        }
+        .has-error label,
+        .has-error input,
+        .has-error textarea {
+            color: red;
+            border-color: red;
+        }
+        .list-unstyled li {
+            font-size: 13px;
+            padding: 4px 0 0;
+            color: red;
+        }
+        .submit {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <h5 class="card-header text-center">Registration Form</h5>
+            <div class="card-body">
+                <form role="form" data-toggle="validator" id="cont">
+
+                    <div class="form-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg>
+                        <label>First Name*</label>
+                        <input type="text" class="form-control" data-error="You must have a name." id="inputName" placeholder="Name" required>
+                        <!-- Error -->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg>
+                        <label>Last name*</label>
+                        <input type="text" class="form-control" name="username" maxlength="10" minlength="3"
+                            pattern="^[a-zA-Z0-9_.-]*$" id="inputUsername" placeholder="Username" required>
+                        <!-- Error -->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+</svg>
+                        <label>Email*</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                        <!-- Error -->
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-lock-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm0 5a1.5 1.5 0 0 1 .5 2.915l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99A1.5 1.5 0 0 1 8 5z"/>
+</svg>
+                        <label>Password*</label>
+                        <div class="form-group">
+                            <input type="password" data-minlength="4" class="form-control" id="inputPassword"
+                                data-error="Have atleast 4 characters" placeholder="Password" required />
+                            <!-- Error -->
+                           
+                            <div class="form-group">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-lock-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm0 5a1.5 1.5 0 0 1 .5 2.915l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99A1.5 1.5 0 0 1 8 5z"/>
+</svg>
+                        <label>Confirm Password*</label>
+                            <input type="password" class="form-control" id="inputConfirmPassword"
+                                data-match="#inputPassword" data-match-error="Password don't match"
+                                placeholder="Confirm" required />
+                            <!-- Error -->
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      
+</svg>
+                        <label> Gender*</label>
+                        <p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
+                            </svg>
+                            Male
+                                <input type="radio" name="gender" id="male" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5z"/>
+</svg> 
+                                Female
+                                <input type="radio" name="gender" id="female" />
+                                 </p>
+                    </div>
+                    <div class="form-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+</svg>
+                        <label>Discription*</label><i class="bi bi-pencil-square"></i>
+                        <textarea class="form-control" data-error="Please enter message." id="inputMessage"
+                            placeholder="Message" required=""></textarea>
+                        <!-- Error -->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                      <div class="form-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-images" viewBox="0 0 16 16">
+  <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+  <path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"/>
+</svg>
+                        <label>  Add your profile photo*</label><i class="bi bi-images"></i>
+                          <input type="file" name="file" id="addphoto" required />
+                        </div>
+                        <br>
+                        <div class="submit">
+                                <button class="submit" type="submit">Submit form</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

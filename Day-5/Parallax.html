@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>parallax</title>
+    <style>
+      .srt {
+        justify-content: center;
+        /* align-content: center; */
+        display: flex;
+      }
+      p {
+        font-size: 2rem;
+      }
+      .parallax {
+        background-image: url(car.jpg.jpg);
+        min-height: 50rem;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="srt">
+      <img src="srt.png.png" alt="" />
+    </div>
+    <div
+      style="
+        height: auto;
+        background-color: rgb(103, 169, 223);
+        font-size: 36px;
+      "
+    >
+      <p>
+        SRT provides connection and control, reliable transmission similar to
+        TCP; however, it does so at the application layer, using UDP protocol as
+        an underlying transport layer. It supports packet recovery while
+        maintaining low latency (default: 120 ms). SRT also supports encryption
+        using AES.
+      </p>
+    </div>
+    <div class="parallax"></div>
+    <div
+      style="
+        height: 1000px;
+        background-color: rgb(103, 169, 223);
+        font-size: 36px;
+      "
+    >
+      The protocol was derived from the UDT project,[1] which was designed for
+      fast file transmission. It provided the reliability mechanism by utilising
+      similar methods for connection, sequence numbers, acknowledgements and
+      re-transmission of lost packets. It utilises selective and immediate
+      (NAK-based) re-transmission. SRT added several features on top of that in
+      order to support live streaming mode: Controlled latency, with source time
+      transmission (timestamp-based packet delivery) Relaxed sender speed
+      control Conditional "too late" packet dropping (prevents head-of-line
+      blocking caused by a lost packet that wasn't recovered on time) Eager
+      packet re-transmission (periodic NAK-report)
+    </div>
+    <div class="parallax"></div>
+  </body>
+</html>
