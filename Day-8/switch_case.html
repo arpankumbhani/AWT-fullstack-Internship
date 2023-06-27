@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch case</title>
+  </head>
+  <body>
+    <script>
+      var fruittype = prompt("konsa fruit chahi ye?");
+      switch (fruittype) {
+        case "narangi":
+          document.write("narangi hai 60rs kilo.");
+          break;
+        case "sab":
+          document.write("sab hai 100rs kilo.");
+          break;
+        case "kele":
+          document.write("kele hai 40rs kilo.");
+          break;
+        case "guavava":
+          document.write("guavava hai 80rs kilo.");
+          break;
+        case "aam":
+          document.write("aam hai 300rs dozen.");
+          break;
+        case "papita":
+          document.write("papita bhi 300rs dozen hai. ");
+          break;
+        default:
+          document.write(`${fruittype} aaj khatam ho gaya hai kal aayega. `);
+      }
+      document.write("orr kuch chahiye?");
+    </script>
+  </body>
+</html>
