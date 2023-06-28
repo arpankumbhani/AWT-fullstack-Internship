@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function</title>
+  </head>
+  <body>
+    <script>
+      //using function name
+      function calcAddition(number1, number2) {
+        return number1 + number2;
+      }
+      console.log(calcAddition(10, 7));
+
+      //Without [function name-using variable decalartion
+      const square = function (number) {
+        return number * number;
+      };
+      const x = square(4); // x gets the value 16
+      console.log(x);
+
+      //Arrow function
+
+      const a = ["hydrogen", "Helium", "lithium", "beryllium"];
+
+      const a2 = a.map(function (s) {
+        return s.length;
+      });
+
+      console.log("Normal way", a2); // [8,6,7,9]
+
+      const a3 = a.map((s) => s.length);
+
+      console.log("using Arrow Function", a3);
+
+      //All function declarations are effectively at the top of the scope
+      console.log(square(5)); //25
+      document.write(square(3));
+    </script>
+  </body>
+</html>

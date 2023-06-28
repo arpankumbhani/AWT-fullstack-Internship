@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <style>
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="demoOnClick()">click Event!!</button>
+    <hr />
+    <button ondblclick="demoOndblClick()">Double click Event!!</button>
+    <hr />
+    <b>Focus:</b>
+    <br />
+    <input
+      type="text"
+      placeholder="Focus Event demo"
+      id="txtfocus"
+      onFocus="demoOnFocus()"
+    />
+    <hr />
+
+    <b>Blur:</b>
+    <br />
+    <input
+      type="text"
+      placeholder="Blur Event demo"
+      id="txtBlur"
+      onBlur="demoOnBlur()"
+    />
+    <hr />
+
+    <b>Keypress:</b>
+    <br />
+    <input
+      type="text"
+      placeholder="Keypress Event demo"
+      id="txtKeypress"
+      onKeypress="demoOnKeypress()"
+    />
+    <hr />
+
+    <b>keyUp:</b>
+    <br />
+    <input
+      type="text"
+      placeholder="keyUp Event demo"
+      id="txtkeyUp"
+      onkeyUp="demoOnkeyUp()"
+    />
+    <script>
+      function demoOnClick() {
+        alert("click Event!!");
+      }
+      function demoOndblClick() {
+        alert("Double click Event!!");
+      }
+      function demoOnFocus() {
+        document.getElementById("txtfocus").style.backgroundColor = "Red";
+      }
+      function demoOnBlur() {
+        document.getElementById("txtBlur").style.backgroundColor = "Blue";
+      }
+      function demoOnKeypress() {
+        alert("Keypress done");
+      }
+      function demoOnkeyUp() {
+        alert("keyUp Done");
+      }
+    </script>
+  </body>
+</html>

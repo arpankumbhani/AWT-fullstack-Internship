@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exponential</title>
+  </head>
+  <body>
+    <script>
+      //the exponential() method
+      let numexp = 3.14;
+      document.write("<br/>" + numexp.toExponential(1));
+      document.write("<br/>" + numexp.toExponential(2));
+      document.write("<br/>" + numexp.toExponential(4));
+      document.write("<br/>" + numexp.toExponential(6) + "<br/>");
+
+      //the tofixed() method
+      let numfixed = 3.14;
+      document.write("<br/>" + numfixed.toFixed());
+      document.write("<br/>" + numfixed.toFixed(2));
+      document.write("<br/>" + numfixed.toFixed(4));
+      document.write("<br/>" + numfixed.toFixed(6) + "<br/>");
+
+      //the toprecision()method
+      let numprec = 3.14;
+      document.write("<br/>" + numprec.toPrecision());
+      document.write("<br/>" + numprec.toPrecision(2));
+      document.write("<br/>" + numprec.toPrecision(4));
+      document.write("<br/>" + numprec.toPrecision(6) + "<br/>");
+      //Max number posible in JS
+      document.write("<br/>" + Number.MAX_VALUE + "<br/>");
+
+      //MIN number posible in JS
+      document.write("<br/>" + Number.MIN_VALUE + "<br/>");
+      //1 /0;
+      document.write("<br/>" + Number.POSITIVE_INFINITY);
+      //-1 /0
+      document.write("<br/>" + Number.NEGATIVE_INFINITY + "<br/>");
+
+      //parseInt()
+
+      document.write("<br/>" + parseInt("-10"));
+      document.write("<br/>" + parseInt("-10.33"));
+      document.write("<br/>" + parseInt(" -10"));
+      document.write("<br/>" + parseInt("10 20 30") + "<br/>");
+
+      //Date - year ,month ,day ,hours ,minutes, second ,millisecond
+      document.write("<br/>" + new Date());
+      document.write("<br/>" + new Date("1970-01-01"));
+      document.write("<br/>" + new Date(2018, 11, 24, 10, 33, 30, 0));
+      document.write("<br/>" + new Date("October 13,2014 11:13:00") + "<br/>");
+
+      var d = new Date();
+      document.write("<br/>" + d.toString());
+      document.write("<br/>" + d.toUTCString());
+      document.write("<br/>" + d.toDateString());
+      document.write("<br/>" + d.toISOString());
+
+      //In Milisecond
+      document.write("<br/>" + d.getTime());
+      document.write("<br/>" + d.getDate());
+      document.write("<br/>" + d.getDate());
+      document.write("<br/>" + d.getFullYear());
+      document.write("<br/>" + d.getHours());
+      document.write("<br/>" + d.getMonth());
+    </script>
+  </body>
+</html>

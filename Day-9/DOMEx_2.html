@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex2</title>
+    <style>
+      div {
+        width: 250px;
+        height: 250px;
+        border: 2px solid rgb(0, 0, 0);
+        padding: 50px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="btn"></div>
+    <hr />
+    <h3>change to div</h3>
+    <hr />
+    <label for="color-picker">Color:</label>
+    <input type="color" value="#ff0000" id="colorpicker" />
+    <br />
+    <hr />
+    <button onclick="demoOnClick()">click to change yellow</button>
+    <br />
+    <hr />
+    <button onclick="myFunction()">click and chosse the color!!</button>
+    <br />
+    <hr />
+    <h3>change to body</h3>
+    <label for="color-picker">Color:</label>
+    <input type="color" value="#fff" id="colorpicker2" />
+    <br />
+    <hr />
+    <button onclick="demoOnClick2()">click to change yellow</button>
+    <br />
+    <hr />
+    <button onclick="myFunction2()">click and chosse the color!!</button>
+    <br />
+    <hr />
+    <script>
+      document
+        .getElementById("colorpicker")
+        .addEventListener("change", function () {
+          document.querySelector("#btn").style.backgroundColor = this.value;
+        });
+
+      document
+        .getElementById("colorpicker2")
+        .addEventListener("change", function () {
+          document.body.style.backgroundColor = this.value;
+          // document.querySelector("#btn").style.backgroundColor = "#fff
+        });
+
+      function demoOnClick() {
+        document.getElementById("btn").style.backgroundColor = "yellow";
+      }
+      function demoOnClick2() {
+        document.body.style.backgroundColor = "yellow";
+      }
+      function myFunction() {
+        let color = prompt("Please enter color");
+        if (color != null) {
+          document.getElementById("btn").style.backgroundColor = color;
+        }
+      }
+      function myFunction2() {
+        let color = prompt("Please enter color");
+        if (color != null) {
+          document.body.style.backgroundColor = color;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM EX 1</title>
+    <style>
+      div {
+        width: 250px;
+        height: 250px;
+        border: 2px solid rgb(0, 0, 0);
+        padding: 50px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="btn"></div>
+    <hr />
+    <label for="colorpicker">Color Picker:</label>
+    <input type="color" id="colorpicker" value="#0000ff" />
+    <br />
+    <hr />
+    <button onclick="demoOnClick()">click to change yellow</button>
+    <br />
+    <hr />
+    <button onclick="myFunction()">Click and Enter the color</button>
+
+    <script>
+      document
+        .getElementById("colorpicker")
+        .addEventListener("change", function () {
+          document.querySelector(".btn").style.backgroundColor = this.value;
+        });
+
+      function demoOnClick() {
+        document.getElementById("btn").style.backgroundColor = "yellow";
+      }
+
+      function myFunction() {
+        let color = prompt("Please enter color");
+        if (color != null) {
+          document.getElementById("btn").style.backgroundColor = "Red";
+        }
+      }
+    </script>
+  </body>
+</html>
