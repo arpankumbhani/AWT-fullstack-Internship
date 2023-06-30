@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>by class name</title>
+  </head>
+  <body>
+    <p>An unordered list</p>
+    <ul>
+      <li>html</li>
+      <li>css</li>
+      <li>Bootsstrap</li>
+      <li>Javascript</li>
+    </ul>
+    <p>the innerHTML of the third li element</p>
+    <p id="demo"></p>
+
+    <script>
+      const collection = document.getElementsByTagName("li");
+      Document.getElementsByid("demo").innerHTML = collection[2].innerHTML;
+      //   document.getElementById("demo").innerHTML =
+      //     document.getElementsByTagName("li")[3].innerHTML;
+    </script>
+  </body>
+</html>

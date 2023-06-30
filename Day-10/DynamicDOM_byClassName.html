@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DynamicDOM_byClassName</title>
+    <style>
+      h1 {
+        color: blue;
+      }
+      body {
+        text-align: center;
+      }
+      button {
+        background-color: gray;
+        color: #fff;
+        width: 300px;
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button onclick="yellow()" class="yellow">
+        Click to Change to yellow button
+      </button>
+      <br />
+      <button onclick="blue()" class="blue">
+        Click to Change to blue button
+      </button>
+      <br />
+    </div>
+
+    <script>
+      function yellow() {
+        document.getElementsByClassName("yellow")[0].style.backgroundColor =
+          "yellow";
+      }
+      function blue() {
+        document.getElementsByClassName("blue")[0].style.backgroundColor =
+          "blue";
+      }
+    </script>
+  </body>
+</html>
