@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .img {
+        height: 20px;
+        width: 20px;
+      } */
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to JQuery</h1>
+    <div class="img">
+      <img id="img1" src="srt.jpg" alt="" style="width: 500px" ; />
+    </div>
+    <br />
+    <hr />
+    <button onclick="ready()">fade</button>
+    <script>
+      //   function fasde() {
+      //     $("#img1").fadeOut();
+      //     $("#img1").fadeTo("fast", 0.1);
+      //   }
+
+      $("document").ready(function () {
+        $("#img1").mouseenter(function () {
+          $("#img1").css("width", "700px");
+        });
+        $("#img1").mouseleave(function () {
+          $("#img1").css("width", "500px");
+        });
+      });
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
